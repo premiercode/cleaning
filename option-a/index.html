@@ -1,0 +1,604 @@
+<!doctype html>
+<!--
+  PITCH NOTE (Option A, "Fresh and bright"): a bright mint-and-sky homepage where the instant quote is the hero,
+  so a visitor sees a sample price range in seconds, before giving any contact details.
+  Look first at the hero widget: change bedrooms, bathrooms, frequency and service type and watch the price move.
+  Then scroll to "What every claim means" (trust) and the 24-hour re-clean promise.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bur Oak Home Cleaning Co. | See a sample price in seconds (Design preview)</title>
+  <meta name="description" content="Design preview for a fictional house cleaning company in Allen, TX. Pick your home size and frequency to see a sample price range instantly, with no contact details needed.">
+  <meta name="theme-color" content="#f4fbff">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Fredoka:wdth,wght@75..125,400..700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0c.9 7.2 4.1 10.6 12 12-7.9 1.4-11.1 4.8-12 12-.9-7.2-4.1-10.6-12-12 7.9-1.4 11.1-4.8 12-12Z"/></symbol>
+    <symbol id="tick" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z" fill="currentColor"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div class="preview-bar" role="note">
+    <p><strong>Design preview.</strong> Bur Oak Home Cleaning Co. is a fictional company. Prices, contact details, credentials and reviews are samples.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#main" aria-label="Bur Oak Home Cleaning Co., back to top">
+        <span class="wordmark-main">Bur<span class="wordmark-dot" aria-hidden="true">·</span>Oak</span>
+        <span class="wordmark-sub">Home Cleaning Co.</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li class="nav-phone"><a href="tel:+14695550176"><svg aria-hidden="true"><use href="#phone"/></svg>(469) 555-0176</a></li>
+          <li><a href="#included">What's included</a></li>
+          <li><a href="#trust">Trust</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <!-- PLACEHOLDER: client's real phone number (469-555-0176 is a reserved fictional number) -->
+        <a class="header-phone" href="tel:+14695550176">
+          <svg aria-hidden="true"><use href="#phone"/></svg>
+          <span>(469) 555-0176</span>
+        </a>
+        <a class="btn btn-primary btn-sm" href="#instant-quote">Get an instant quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 1. HERO + QUOTE WIDGET -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-sky" aria-hidden="true">
+        <span class="blob blob-mint"></span>
+        <span class="blob blob-sky"></span>
+        <svg class="spark s1"><use href="#spark"/></svg>
+        <svg class="spark s2"><use href="#spark"/></svg>
+        <svg class="spark s3"><use href="#spark"/></svg>
+        <svg class="spark s4"><use href="#spark"/></svg>
+        <svg class="spark s5"><use href="#spark"/></svg>
+      </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>House cleaning in Collin County and nearby</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line"><span>Your price,</span></span>
+            <span class="line"><span class="hl">before</span> <span>you call.</span></span>
+          </h1>
+          <p class="hero-lede">Pick your home size and how often you want us. The sample price updates as you tap. No email, no phone number, no waiting for a callback.</p>
+
+        </div>
+
+        <div class="hero-stage">
+          <figure class="hero-photo">
+            <picture>
+              <source type="image/webp" srcset="../assets/img/window-sheer-curtains-sunlight-01-800.webp 800w, ../assets/img/window-sheer-curtains-sunlight-01-1600.webp 1600w" sizes="(min-width: 64em) 30vw, 60vw">
+              <img src="../assets/img/window-sheer-curtains-sunlight-01-800.webp" width="800" height="1200" alt="Sunlight pouring through sheer white curtains into a calm, tidy room" fetchpriority="high">
+            </picture>
+          </figure>
+
+          <div class="quote-card" id="instant-quote">
+            <div class="quote-head">
+              <h2 class="quote-title">Instant quote</h2>
+              <span class="tag tag-live">Preview only</span>
+            </div>
+
+            <form class="quote-form" id="quote-widget" aria-describedby="quote-note" novalidate>
+              <fieldset class="seg">
+                <legend>Bedrooms</legend>
+                <div class="seg-row">
+                  <label><input type="radio" name="w-beds" value="2" checked><span>1–2</span></label>
+                  <label><input type="radio" name="w-beds" value="3"><span>3</span></label>
+                  <label><input type="radio" name="w-beds" value="4"><span>4</span></label>
+                  <label><input type="radio" name="w-beds" value="5"><span>5+</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>Bathrooms</legend>
+                <div class="seg-row">
+                  <label><input type="radio" name="w-baths" value="1" checked><span>1</span></label>
+                  <label><input type="radio" name="w-baths" value="2"><span>2</span></label>
+                  <label><input type="radio" name="w-baths" value="3"><span>3</span></label>
+                  <label><input type="radio" name="w-baths" value="4"><span>4+</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>How often</legend>
+                <div class="seg-row seg-wrap">
+                  <label><input type="radio" name="w-freq" value="once"><span>One-time</span></label>
+                  <label><input type="radio" name="w-freq" value="weekly"><span>Weekly</span></label>
+                  <label><input type="radio" name="w-freq" value="biweekly" checked><span>Every two weeks</span></label>
+                  <label><input type="radio" name="w-freq" value="monthly"><span>Monthly</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>Service</legend>
+                <div class="seg-row">
+                  <label><input type="radio" name="w-type" value="standard" checked><span>Standard</span></label>
+                  <label><input type="radio" name="w-type" value="deep"><span>Deep</span></label>
+                  <label><input type="radio" name="w-type" value="move"><span>Move-in/out</span></label>
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="price-panel">
+              <p class="price-label">Sample price range <span class="price-per">per visit</span></p>
+              <!-- PLACEHOLDER: pricing logic. Base = larger of bedroom or bathroom tier from the sample table; recurring discount on standard only; range = from price to about +25%; 5+ bedrooms or 4+ bathrooms shows "custom quote" -->
+              <output class="price" id="price-out" for="quote-widget">
+                <span class="price-static">from <strong>$130</strong> <span class="tag">Sample</span></span>
+              </output>
+              <svg class="burst b1" aria-hidden="true"><use href="#spark"/></svg>
+              <svg class="burst b2" aria-hidden="true"><use href="#spark"/></svg>
+              <svg class="burst b3" aria-hidden="true"><use href="#spark"/></svg>
+              <p class="visually-hidden" id="price-live" aria-live="polite" aria-atomic="true"></p>
+              <p class="price-detail" id="price-detail">Standard clean, 2 bed / 1 bath. Other sizes and services are in the full sample price list.</p>
+              <div class="price-actions">
+                <a class="btn btn-primary" href="#quote" id="widget-cta">Request this cleaning <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+              </div>
+            </div>
+            <p class="quote-note" id="quote-note">Sample price, preview only. Final price is confirmed before the first visit, plus applicable sales tax. <a class="text-link" href="#prices">See all sample prices</a></p>
+          </div>
+        </div>
+        <ul class="hero-proof" aria-label="Up front, in plain words">
+          <li><svg aria-hidden="true"><use href="#tick"/></svg>Background check before the first visit <span class="tag">Sample</span></li>
+          <li><svg aria-hidden="true"><use href="#tick"/></svg>24-hour re-clean promise <span class="tag">Sample</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. WHAT'S INCLUDED -->
+    <section class="section included" id="included" aria-labelledby="included-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">What's included, room by room</p>
+          <h2 id="included-title" class="h2">Every room, <span class="hl">spelled out.</span></h2>
+          <p class="section-lede">A standard clean covers these four areas. Deep and move-in/out cleans add the extras below. <span class="tag">Sample list</span></p>
+        </header>
+
+        <div class="rooms">
+          <article class="room reveal">
+            <div class="room-img">
+              <picture>
+                <source type="image/webp" srcset="../assets/img/kitchen-hex-tile-island-03-800.webp 800w, ../assets/img/kitchen-hex-tile-island-03-1600.webp 1600w" sizes="(min-width: 64em) 25vw, (min-width: 40em) 45vw, 92vw">
+                <img src="../assets/img/kitchen-hex-tile-island-03-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="White kitchen with hexagon tile backsplash, a stainless steel range and a marble island">
+              </picture>
+            </div>
+            <div class="room-body">
+              <h3 class="h3">Kitchen</h3>
+              <ul class="ticks">
+                <li>Counters and backsplash wiped and sanitized</li>
+                <li>Sink and faucet</li>
+                <li>Outside of appliances</li>
+                <li>Cabinet fronts spot-cleaned</li>
+                <li>Trash emptied</li>
+                <li>Floor vacuumed and mopped</li>
+              </ul>
+            </div>
+          </article>
+          <article class="room reveal">
+            <div class="room-img">
+              <picture>
+                <source type="image/webp" srcset="../assets/img/bathroom-shower-vanity-01-800.webp 800w, ../assets/img/bathroom-shower-vanity-01-1600.webp 1600w" sizes="(min-width: 64em) 25vw, (min-width: 40em) 45vw, 92vw">
+                <img src="../assets/img/bathroom-shower-vanity-01-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="Modern bathroom with a glass shower, soaking tub and double vanity">
+              </picture>
+            </div>
+            <div class="room-body">
+              <h3 class="h3">Bathrooms</h3>
+              <ul class="ticks">
+                <li>Toilet, tub and shower cleaned and disinfected</li>
+                <li>Sink, counters and fixtures cleaned and disinfected</li>
+                <li>Mirrors</li>
+                <li>Trash</li>
+                <li>Floors</li>
+              </ul>
+            </div>
+          </article>
+          <article class="room reveal">
+            <div class="room-img">
+              <picture>
+                <source type="image/webp" srcset="../assets/img/bedroom-white-comforter-01-800.webp 800w, ../assets/img/bedroom-white-comforter-01-1600.webp 1600w" sizes="(min-width: 64em) 25vw, (min-width: 40em) 45vw, 92vw">
+                <img src="../assets/img/bedroom-white-comforter-01-800.webp" width="800" height="467" loading="lazy" decoding="async" alt="Neatly made bed with white bedding, lamps on both sides and a dark wood dresser">
+              </picture>
+            </div>
+            <div class="room-body">
+              <h3 class="h3">Bedrooms</h3>
+              <ul class="ticks">
+                <li>Reachable surfaces dusted</li>
+                <li>Beds made</li>
+                <li>Carpets vacuumed</li>
+                <li>Hard floors mopped</li>
+              </ul>
+            </div>
+          </article>
+          <article class="room reveal">
+            <div class="room-img">
+              <picture>
+                <source type="image/webp" srcset="../assets/img/living-room-gray-sofa-03-800.webp 800w, ../assets/img/living-room-gray-sofa-03-1600.webp 1600w" sizes="(min-width: 64em) 25vw, (min-width: 40em) 45vw, 92vw">
+                <img src="../assets/img/living-room-gray-sofa-03-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="Tidy living room with a gray sofa and wood coffee table, open to the dining area and kitchen">
+              </picture>
+            </div>
+            <div class="room-body">
+              <h3 class="h3">Living areas</h3>
+              <ul class="ticks">
+                <li>Dusting</li>
+                <li>Vacuuming</li>
+                <li>Mopping</li>
+                <li>Trash</li>
+                <li>Tidying</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="levels">
+          <div class="level level-deep reveal">
+            <p class="level-kicker"><svg aria-hidden="true"><use href="#plus"/></svg>Deep clean adds</p>
+            <ul class="chips">
+              <li>Baseboards</li><li>Blinds</li><li>Doors and door frames</li><li>Ceiling fans</li><li>Air vents</li><li>Light switches</li><li>Window tracks</li><li>Built-up grease</li><li>Soap scum and grout</li>
+            </ul>
+          </div>
+          <div class="level level-move reveal">
+            <p class="level-kicker"><svg aria-hidden="true"><use href="#plus"/></svg>Move-in/out adds</p>
+            <ul class="chips">
+              <li>Inside cabinets and drawers</li><li>Inside oven</li><li>Inside fridge and freezer</li>
+            </ul>
+            <p class="level-note">The home must be empty.</p>
+          </div>
+          <div class="level level-not reveal">
+            <p class="level-kicker">Usually not included</p>
+            <p>Hand-washing dishes and exterior areas like porches and decks. Laundry and inside oven are add-ons.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS -->
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title" class="h2">Three steps. <span class="hl">One of them is yours.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3 class="h3">Book</h3>
+            <p>See a sample price above, then send your details. The office confirms your price and arranges access before the first visit.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3 class="h3">We clean</h3>
+            <p>The team brings its own products and equipment, and we aim to send the same team every visit.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3 class="h3">You relax</h3>
+            <p>Missed something? Tell us within 24 hours and we'll come back to fix it, at no charge.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. TRUST -->
+    <section class="section trust" id="trust" aria-labelledby="trust-title">
+      <div class="wrap trust-grid">
+        <div class="trust-intro reveal">
+          <p class="eyebrow">Trust and safety</p>
+          <h2 id="trust-title" class="h2">What every claim <span class="hl">actually means.</span></h2>
+          <p class="section-lede">Most cleaning sites say "background-checked, bonded and insured" and stop there. Here is each one in plain words.</p>
+          <figure class="trust-photo">
+            <picture>
+              <source type="image/webp" srcset="../assets/img/gloves-spray-cloth-desk-01-800.webp 800w, ../assets/img/gloves-spray-cloth-desk-01-1600.webp 1600w" sizes="(min-width: 64em) 38vw, 92vw">
+              <img src="../assets/img/gloves-spray-cloth-desk-01-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="Gloved hands wiping a desk with a cloth and spray bottle">
+            </picture>
+          </figure>
+        </div>
+        <!-- PLACEHOLDER: client to confirm background check provider, bond amount and insurance certificate before launch -->
+        <ul class="claims">
+          <li class="claim reveal">
+            <p class="claim-word">Background checked</p>
+            <p class="claim-means">Every cleaner passes a criminal background check before their first visit.</p>
+            <span class="tag">Sample</span>
+          </li>
+          <li class="claim reveal">
+            <p class="claim-word">Bonded</p>
+            <p class="claim-means">A janitorial bond helps protect you against theft by our employees, up to the bond amount.</p>
+            <span class="tag">Sample</span>
+          </li>
+          <li class="claim reveal">
+            <p class="claim-word">Insured</p>
+            <p class="claim-means">Carries general liability insurance. Certificate available on request.</p>
+            <span class="tag">Sample</span>
+          </li>
+          <li class="claim reveal">
+            <p class="claim-word">Same team</p>
+            <p class="claim-means">We aim to send the same team to every visit.</p>
+            <span class="tag">Sample</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. RE-CLEAN PROMISE -->
+    <section class="section promise" id="promise" aria-labelledby="promise-title">
+      <div class="wrap">
+        <div class="promise-card reveal">
+          <div class="promise-sky" aria-hidden="true">
+            <svg class="spark p1"><use href="#spark"/></svg>
+            <svg class="spark p2"><use href="#spark"/></svg>
+            <svg class="spark p3"><use href="#spark"/></svg>
+          </div>
+          <div class="promise-big" aria-hidden="true"><span>24</span><small>hours</small></div>
+          <div class="promise-copy">
+            <p class="eyebrow eyebrow-light">Re-clean promise <span class="tag tag-light">Sample</span></p>
+            <h2 id="promise-title" class="h2">Missed a spot? We come back.</h2>
+            <p class="promise-quote">Re-clean promise: tell us within 24 hours and we'll come back to fix anything we missed, at no charge.</p>
+            <!-- PLACEHOLDER: client to confirm the re-clean conditions -->
+            <h3 class="promise-cond-title">The conditions</h3>
+            <ul class="promise-cond">
+              <li>Tell us within 24 hours of the visit.</li>
+              <li>It covers anything we missed from the clean you booked.</li>
+              <li>We fix it with a return visit at no charge. It is a re-clean, not a refund.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PRICES -->
+    <section class="section prices" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Starting prices <span class="tag">Sample</span></p>
+          <h2 id="prices-title" class="h2">The whole price list. <span class="hl">Out in the open.</span></h2>
+        </header>
+
+        <div class="price-grid">
+          <div class="table-card reveal">
+            <div class="table-scroll" role="region" aria-labelledby="price-caption" tabindex="0">
+              <table class="price-table">
+                <caption id="price-caption">Starting prices per visit (Sample)</caption>
+                <thead>
+                  <tr><th scope="col">Home</th><th scope="col">Standard, from</th><th scope="col">Deep, from</th><th scope="col">Move-in/out, from</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">2 bed / 1 bath</th><td>$130</td><td>$210</td><td>$240</td></tr>
+                  <tr><th scope="row">3 bed / 2 bath</th><td>$160</td><td>$270</td><td>$300</td></tr>
+                  <tr><th scope="row">4 bed / 3 bath</th><td>$200</td><td>$330</td><td>$360</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="discounts">
+              <p class="mini-title">Recurring discount off the standard price <span class="tag">Sample</span></p>
+              <ul>
+                <li><strong>15%</strong><span>Weekly</span></li>
+                <li><strong>10%</strong><span>Every two weeks</span></li>
+                <li><strong>5%</strong><span>Monthly</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="price-side">
+            <div class="side-card reveal">
+              <h3 class="h3">Add-ons <span class="tag">Sample</span></h3>
+              <dl class="addons">
+                <div><dt>Inside oven</dt><dd>$35</dd></div>
+                <div><dt>Inside fridge</dt><dd>$35</dd></div>
+                <div><dt>Interior windows</dt><dd>$6 per window</dd></div>
+                <div><dt>Laundry</dt><dd>$20 per load</dd></div>
+              </dl>
+            </div>
+            <div class="side-card reveal">
+              <h3 class="h3">Custom quote</h3>
+              <ul class="plain">
+                <li>Post-construction cleaning</li>
+                <li>Small office cleaning: a walk-through, then a monthly quote</li>
+                <li>Homes over about 4,000 sq ft</li>
+                <li>Vacation-rental turnovers: from $120 for 1 to 2 bedrooms (Sample)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="disclaimer reveal">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title" class="h2">Quick answers.</h2>
+        </header>
+        <div class="faq-list">
+          <details class="reveal" open>
+            <summary><h3>Do I need to be home?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Usually not. Access is arranged with the office before the first visit.</p>
+          </details>
+          <details class="reveal">
+            <summary><h3>Do you bring supplies?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Yes, the team brings its own products and equipment. If you'd like a specific product used, tell us.</p>
+          </details>
+          <details class="reveal">
+            <summary><h3>What about pets?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Tell us about pets before the first visit. Keep pets that might slip out an open door secured. Pet accidents are not part of a standard clean.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SERVICE AREA + FORM -->
+    <section class="section book" id="quote" aria-labelledby="book-title">
+      <div class="book-sky" aria-hidden="true"><span class="blob blob-mint"></span><span class="blob blob-sky"></span></div>
+      <div class="wrap book-grid">
+        <div class="area reveal">
+          <p class="eyebrow">Service area</p>
+          <h2 id="book-title" class="h2">Collin County <span class="hl">and nearby.</span></h2>
+          <p class="section-lede">Service area only, based in Allen, TX.</p>
+          <ul class="cities" aria-label="Cities we serve">
+            <li>Allen</li><li>McKinney</li><li>Plano</li><li>Fairview</li><li>Lucas</li><li>Murphy</li><li>Wylie</li>
+          </ul>
+          <figure class="area-photo">
+            <picture>
+              <source type="image/webp" srcset="../assets/img/towels-folded-plants-02-800.webp 800w, ../assets/img/towels-folded-plants-02-1600.webp 1600w" sizes="(min-width: 64em) 36vw, 92vw">
+              <img src="../assets/img/towels-folded-plants-02-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="Folded green and white towels on a windowsill beside small potted succulents">
+            </picture>
+          </figure>
+          <p class="area-call">Rather talk? <a href="tel:+14695550176">(469) 555-0176</a></p>
+        </div>
+
+        <div class="form-card reveal">
+          <h3 class="form-title">Request your cleaning</h3>
+          <p class="form-intro">Send your details and the office will confirm your price. <span class="tag">Preview only</span></p>
+          <!-- PLACEHOLDER: form endpoint (no action attribute in this preview) -->
+          <form class="lead-form" id="lead-form" novalidate>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-zip">ZIP code</label>
+                <input id="f-zip" name="zip" type="text" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required>
+              </div>
+              <div class="field">
+                <label for="f-date">Preferred start date</label>
+                <input id="f-date" name="start_date" type="date">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-beds">Bedrooms</label>
+                <select id="f-beds" name="bedrooms">
+                  <option value="2">1–2</option><option value="3">3</option><option value="4">4</option><option value="5">5 or more</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-baths">Bathrooms</label>
+                <select id="f-baths" name="bathrooms">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4 or more</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-type">Service type</label>
+                <select id="f-type" name="service_type">
+                  <option value="standard">Standard</option><option value="deep">Deep</option><option value="move">Move-in/out</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-freq">Frequency</label>
+                <select id="f-freq" name="frequency">
+                  <option value="once">One-time</option><option value="weekly">Weekly</option><option value="biweekly" selected>Every two weeks</option><option value="monthly">Monthly</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-notes">Notes</label>
+              <textarea id="f-notes" name="notes" rows="3" aria-describedby="f-notes-help"></textarea>
+              <p class="help" id="f-notes-help">Anything we should know, like pets or parking. Please don't include gate or alarm codes.</p>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Company website</label>
+              <input id="f-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- PLACEHOLDER: reCAPTCHA v3 site key and script go here at launch -->
+            <button class="btn btn-primary btn-block" type="submit" id="lead-submit" disabled>Send my request <svg aria-hidden="true"><use href="#arrow"/></svg></button>
+            <noscript><p class="noscript">Submitting is disabled in this preview.</p></noscript>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="recaptcha-note">Protected by reCAPTCHA (placeholder)</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark wordmark-foot"><span class="wordmark-main">Bur<span class="wordmark-dot" aria-hidden="true">·</span>Oak</span><span class="wordmark-sub">Home Cleaning Co.</span></p>
+        <p>Service area only, based in Allen, TX</p>
+        <p><a href="tel:+14695550176">(469) 555-0176</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+      <div>
+        <h2 class="footer-h">Services</h2>
+        <ul class="footer-list">
+          <li>Recurring cleaning (weekly, every two weeks, monthly)</li>
+          <li>Deep cleaning</li>
+          <li>Move-in and move-out</li>
+          <li>Post-construction</li>
+          <li>Vacation-rental turnovers</li>
+          <li>Small office cleaning</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">About this preview</h2>
+        <p>Photos are royalty-free stock. <a href="../credits.html">Photo credits</a></p>
+        <p>Design preview prepared by Premier Code Inc.</p>
+      </div>
+    </div>
+  </footer>
+<!-- REMOVE AT LAUNCH: option switcher -->
+<!-- Copy this block unchanged to the end of <body> on every option page, just before </body>.
+     Per page, move aria-current="page" and the "on" class to that page's own link. Change nothing else.
+     Links are relative to option-a/, option-b/ and option-c/ folders (one level below the site root). -->
+<style class="pv-style">
+  html { scroll-padding-bottom: 6rem; }
+  footer, .site-footer, body > :last-of-type:not(script):not(nav) { padding-bottom: max(env(safe-area-inset-bottom), 5rem); }
+  .pv-switch {
+    position: fixed; left: 8px; bottom: 8px; z-index: 9999;
+    display: flex; gap: 2px; padding: 3px;
+    background: #fff; border: 1px solid #c8ccd2; border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.28);
+    font: 600 14px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .pv-switch a {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 14px; border-radius: 7px;
+    color: #111; background: transparent; text-decoration: none; white-space: nowrap;
+  }
+  .pv-switch a:hover { background: #eceef1; }
+  .pv-switch a.on { color: #fff; background: #111; }
+  .pv-switch a:focus-visible { outline: 3px solid #1a73e8; outline-offset: 1px; }
+  @media (max-width: 420px) { .pv-switch a { padding: 0 11px; font-size: 13px; } }
+  @media print { .pv-switch { display: none; } }
+</style>
+<nav class="pv-switch" aria-label="Design options">
+  <a href="../option-a/" class="on" aria-current="page">Option A</a>
+  <a href="../option-b/">Option B</a>
+  <a href="../option-c/">Option C</a>
+</nav>
+<!-- /REMOVE AT LAUNCH -->
+</body>
+</html>

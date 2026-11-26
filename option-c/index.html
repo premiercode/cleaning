@@ -1,0 +1,605 @@
+<!doctype html>
+<!--
+  PITCH NOTE (Option C, "Playful checklist"): Bold flat color blocks and a hand-drawn tick make the whole
+  site read like a checklist the customer can hold the company to, from an instant price ticket to a
+  room-by-room list of what gets cleaned.
+  Look first at the quote ticket in the hero (change the home size and watch the price), then at the
+  tabbed "What gets cleaned" checklist just below it.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bur Oak Home Cleaning Co. · Instant sample quote and room-by-room checklist (Design preview C)</title>
+  <meta name="description" content="Design preview for a fictional Allen, TX house cleaning company: an instant sample price range, a room-by-room cleaning checklist, plain-language trust details and a re-clean promise.">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: no-preference)').matches)document.documentElement.classList.add('motion');</script>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="preload" as="image" href="../assets/img/kitchen-marble-island-large-02-1600.webp" imagesrcset="../assets/img/kitchen-marble-island-large-02-800.webp 800w, ../assets/img/kitchen-marble-island-large-02-1600.webp 1600w" imagesizes="(min-width: 64em) 40vw, 100vw">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="preview-bar" role="note">
+    <p><strong>Design preview.</strong> Bur Oak Home Cleaning Co. is a fictional company. Prices, contact details, credentials and reviews are samples.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#main" aria-label="Bur Oak Home Cleaning Co., back to top">
+        <span class="wordmark-main">Bur&nbsp;Oak</span>
+        <span class="wordmark-sub">Home Cleaning Co.</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#trust">Trust</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <!-- PLACEHOLDER: client's real phone number (469 555-0176 is fictional) -->
+        <a class="header-phone" href="tel:+14695550176"><span class="visually-hidden">Call </span>(469) 555-0176</a>
+        <a class="btn btn-tomato btn-sm" href="#quote">Get an instant quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 1. HERO + QUOTE TICKET -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-on-dark">House cleaning in Collin County and nearby</p>
+          <h1 id="hero-title" class="hero-title">See your price. <span class="hl">Check every room.</span></h1>
+          <p class="hero-lede">Pick your home size and get a sample price range right here, no email or phone number needed. Then see exactly what gets cleaned, room by room.</p>
+          <ul class="hero-proof draw-group" aria-label="What you can check">
+            <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#trust">Background check before the first visit</a></li>
+            <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#promise">Re-clean promise, within 24 hours</a></li>
+            <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#checklist">A written list for every room</a></li>
+            <li class="hero-proof-tag"><span class="tag tag-sun">Sample</span></li>
+          </ul>
+        </div>
+
+        <div class="ticket-wrap">
+            <figure class="hero-photo">
+            <img src="../assets/img/kitchen-marble-island-large-02-1600.webp"
+                 srcset="../assets/img/kitchen-marble-island-large-02-800.webp 800w, ../assets/img/kitchen-marble-island-large-02-1600.webp 1600w"
+                 sizes="(min-width: 64em) 40vw, 100vw"
+                 width="1600" height="1067" fetchpriority="high"
+                 alt="Bright white kitchen with a long marble island, bar stools and pendant lights">
+          </figure>
+          <form class="ticket" id="quote-widget" aria-labelledby="ticket-title">
+            <div class="ticket-head">
+              <h2 id="ticket-title" class="ticket-title">Instant quote</h2>
+              <span class="tag tag-ink">Sample</span>
+            </div>
+
+            <div class="ticket-static">
+              <p class="ticket-static-price">from <strong>$130</strong> <span class="tag">Sample</span></p>
+              <p>Standard clean of a 2 bedroom, 1 bath home. Larger homes, deep cleans and move-outs cost more.</p>
+              <p><a class="link-strong" href="#prices">See every starting price</a></p>
+            </div>
+
+            <div class="ticket-controls">
+              <fieldset class="seg">
+                <legend>Bedrooms</legend>
+                <div class="seg-options">
+                  <label><input type="radio" name="q-beds" value="0" checked><span>1&ndash;2</span></label>
+                  <label><input type="radio" name="q-beds" value="1"><span>3</span></label>
+                  <label><input type="radio" name="q-beds" value="2"><span>4</span></label>
+                  <label><input type="radio" name="q-beds" value="custom"><span>5+</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>Bathrooms</legend>
+                <div class="seg-options seg-3">
+                  <label><input type="radio" name="q-baths" value="0" checked><span>1</span></label>
+                  <label><input type="radio" name="q-baths" value="1"><span>2</span></label>
+                  <label><input type="radio" name="q-baths" value="2"><span>3+</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>Service</legend>
+                <div class="seg-options seg-3">
+                  <label><input type="radio" name="q-service" value="standard" checked><span>Standard</span></label>
+                  <label><input type="radio" name="q-service" value="deep"><span>Deep</span></label>
+                  <label><input type="radio" name="q-service" value="move"><span>Move-in/out</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="seg">
+                <legend>How often</legend>
+                <div class="seg-options seg-2x2">
+                  <label><input type="radio" name="q-freq" value="0" checked><span>One-time</span></label>
+                  <label><input type="radio" name="q-freq" value="0.15"><span>Weekly</span></label>
+                  <label><input type="radio" name="q-freq" value="0.10"><span>Every two weeks</span></label>
+                  <label><input type="radio" name="q-freq" value="0.05"><span>Monthly</span></label>
+                </div>
+              </fieldset>
+
+              <div class="ticket-perf" aria-hidden="true"></div>
+
+              <div class="ticket-out" aria-live="polite" aria-atomic="true">
+                <p class="ticket-out-label">Sample price range</p>
+                <p class="ticket-price" id="q-price">$130&ndash;$165</p>
+                <p class="ticket-summary" id="q-summary">2 bed / 1 bath, standard, one-time</p>
+                <p class="ticket-note" id="q-note"></p>
+              </div>
+              <p class="ticket-preview"><span class="tag tag-tomato">Preview only</span> Sample price, preview only. Nothing is booked or sent.</p>
+            </div>
+
+            <a class="btn btn-tomato btn-block" href="#quote">Get an instant quote</a>
+            <p class="ticket-fine">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ROOM-BY-ROOM CHECKLIST (signature) -->
+    <section class="section checklist" id="checklist" aria-labelledby="checklist-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">What's included <span class="tag">Sample list</span></p>
+          <h2 id="checklist-title" class="h2">What gets cleaned, <span class="underline">room by room</span>.</h2>
+          <p class="section-lede">Every standard visit works through the same four-room list. Switch the tab to see what a deep clean or a move-in/out clean adds. Tap any item to tick it off yourself.</p>
+        </div>
+
+        <div class="cl-tabs" role="tablist" aria-label="Cleaning type">
+          <button type="button" role="tab" id="tab-standard" aria-controls="panel-standard" aria-selected="true" class="cl-tab" data-tone="cobalt">Standard <span class="cl-tab-price">from $130</span></button>
+          <button type="button" role="tab" id="tab-deep" aria-controls="panel-deep" aria-selected="false" tabindex="-1" class="cl-tab" data-tone="tomato">Deep <span class="cl-tab-price">from $210</span></button>
+          <button type="button" role="tab" id="tab-move" aria-controls="panel-move" aria-selected="false" tabindex="-1" class="cl-tab" data-tone="sun">Move-in/out <span class="cl-tab-price">from $240</span></button>
+        </div>
+
+        <div class="cl-layout">
+          <div class="rooms">
+            <article class="room draw-group">
+              <img src="../assets/img/kitchen-hex-tile-island-03-800.webp" width="800" height="534" loading="lazy" decoding="async"
+                   alt="White kitchen with hexagon tile backsplash, a stainless steel range and a marble island">
+              <div class="room-body">
+                <h3 class="room-title"><span class="room-num" aria-hidden="true">01</span> Kitchen</h3>
+                <ul class="items">
+                <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Counters and backsplash wiped and sanitized</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Sink and faucet</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Outside of appliances</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Cabinet fronts spot-cleaned</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Trash emptied</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Floor vacuumed and mopped</span></label></li>
+                </ul>
+              </div>
+            </article>
+            <article class="room draw-group">
+              <img src="../assets/img/bathroom-sink-toilet-05-800.webp" width="800" height="534" loading="lazy" decoding="async"
+                   alt="Clean bathroom with a gray vanity, large mirror, toilet and tub">
+              <div class="room-body">
+                <h3 class="room-title"><span class="room-num" aria-hidden="true">02</span> Bathrooms</h3>
+                <ul class="items">
+                <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Toilet, tub and shower cleaned and disinfected</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Sink, counters and fixtures cleaned and disinfected</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Mirrors</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Trash</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Floors</span></label></li>
+                </ul>
+              </div>
+            </article>
+            <article class="room draw-group">
+              <img src="../assets/img/bedroom-white-comforter-01-800.webp" width="800" height="467" loading="lazy" decoding="async"
+                   alt="Neatly made bed with white bedding, lamps on both sides and a dark wood dresser">
+              <div class="room-body">
+                <h3 class="room-title"><span class="room-num" aria-hidden="true">03</span> Bedrooms</h3>
+                <ul class="items">
+                <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Reachable surfaces dusted</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Beds made</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Carpets vacuumed</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Hard floors mopped</span></label></li>
+                </ul>
+              </div>
+            </article>
+            <article class="room draw-group">
+              <img src="../assets/img/living-room-gray-sofa-03-800.webp" width="800" height="534" loading="lazy" decoding="async"
+                   alt="Tidy living room with a gray sofa and wood coffee table, open to the dining area and kitchen">
+              <div class="room-body">
+                <h3 class="room-title"><span class="room-num" aria-hidden="true">04</span> Living areas</h3>
+                <ul class="items">
+                <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Dusting</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Vacuuming</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Mopping</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Trash</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Tidying</span></label></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="cl-panels">
+            <div class="cl-panel draw-group tone-cobalt" role="tabpanel" id="panel-standard" aria-labelledby="tab-standard" tabindex="0">
+              <p class="cl-panel-kicker">Standard clean <span class="tag tag-light">Sample</span></p>
+              <h3 class="cl-panel-title">The four-room list, every visit.</h3>
+              <p class="cl-panel-price">from <strong>$130</strong> <span>2 bed / 1 bath, Sample</span></p>
+              <p>Weekly, every two weeks or monthly. Recurring visits save 15%, 10% or 5% off the standard price (Sample).</p>
+              <div class="not-included">
+                <h4>Usually not included</h4>
+                <ul>
+                  <li>Hand-washing dishes</li>
+                  <li>Exterior areas, like porches and decks</li>
+                  <li>Laundry and inside the oven are add-ons</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="cl-panel draw-group tone-tomato" role="tabpanel" id="panel-deep" aria-labelledby="tab-deep" tabindex="0">
+              <p class="cl-panel-kicker">Deep clean adds <span class="tag tag-ink">Sample</span></p>
+              <h3 class="cl-panel-title">Everything in standard, plus the build-up.</h3>
+              <p class="cl-panel-price">from <strong>$210</strong> <span>2 bed / 1 bath, Sample</span></p>
+              <ul class="items items-on-color">
+              <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Baseboards</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Blinds</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Doors and door frames</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Ceiling fans</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Air vents</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Light switches</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Window tracks</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Built-up grease</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Soap scum and grout</span></label></li>
+              </ul>
+            </div>
+
+            <div class="cl-panel draw-group tone-sun" role="tabpanel" id="panel-move" aria-labelledby="tab-move" tabindex="0">
+              <p class="cl-panel-kicker">Move-in/out adds <span class="tag tag-ink">Sample</span></p>
+              <h3 class="cl-panel-title">The insides, while the home is empty.</h3>
+              <p class="cl-panel-price">from <strong>$240</strong> <span>2 bed / 1 bath, Sample</span></p>
+              <ul class="items items-on-color">
+              <li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Inside cabinets and drawers</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Inside oven</span></label></li>
+<li><label class="item"><input type="checkbox" checked><span class="box"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><span class="item-text">Inside fridge and freezer</span></label></li>
+              </ul>
+              <p class="cl-panel-flag"><strong>Good to know:</strong> the home must be empty for a move-in/out clean.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS -->
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title" class="h2">Three steps. One list.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step tone-cobalt">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3 class="step-title">Book</h3>
+            <p>Pick your home size and service, see a sample price range and choose a start date. The price is confirmed before the first visit.</p>
+          </li>
+          <li class="step tone-tomato">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3 class="step-title">We clean</h3>
+            <p>The team brings its own products and equipment and works through the room-by-room list. We aim to send the same team every time.</p>
+          </li>
+          <li class="step tone-sun">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3 class="step-title">You relax</h3>
+            <p>Look it over. If we missed anything, tell us within 24 hours and we'll come back to fix it, at no charge.</p>
+          </li>
+        </ol>
+        <figure class="how-photo">
+          <img src="../assets/img/cleaning-supplies-set-floor-03-1600.webp"
+               srcset="../assets/img/cleaning-supplies-set-floor-03-800.webp 800w, ../assets/img/cleaning-supplies-set-floor-03-1600.webp 1600w, ../assets/img/cleaning-supplies-set-floor-03-2400.webp 2400w"
+               sizes="(min-width: 82rem) 80rem, 100vw" width="1600" height="1067" loading="lazy" decoding="async"
+               alt="Hand reaching for a caddy of unlabeled cleaning bottles, a brush and a sponge">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4. TRUST AND SAFETY -->
+    <section class="section trust" id="trust" aria-labelledby="trust-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-on-dark">Trust and safety</p>
+          <h2 id="trust-title" class="h2">Four claims, spelled&nbsp;out.</h2>
+          <p class="section-lede">Most cleaning sites stop at &ldquo;background-checked, bonded and insured.&rdquo; Here is what each one means, in a sentence you can hold us to.</p>
+        </div>
+        <!-- PLACEHOLDER: client confirms background check provider, bond amount and insurance carrier before launch -->
+        <ul class="claims draw-group">
+          <li class="claim">
+            <div class="claim-top"><span class="claim-tick"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><h3>Background checks</h3><span class="tag tag-sun">Sample</span></div>
+            <p>Every cleaner passes a criminal background check before their first visit.</p>
+          </li>
+          <li class="claim">
+            <div class="claim-top"><span class="claim-tick"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><h3>Bonded</h3><span class="tag tag-sun">Sample</span></div>
+            <p>A janitorial bond helps protect you against theft by our employees, up to the bond amount.</p>
+          </li>
+          <li class="claim">
+            <div class="claim-top"><span class="claim-tick"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><h3>Insured</h3><span class="tag tag-sun">Sample</span></div>
+            <p>Carries general liability insurance. Certificate available on request.</p>
+          </li>
+          <li class="claim">
+            <div class="claim-top"><span class="claim-tick"><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg></span><h3>Same team</h3><span class="tag tag-sun">Sample</span></div>
+            <p>We aim to send the same team to every visit.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. RE-CLEAN PROMISE -->
+    <section class="section promise" id="promise" aria-labelledby="promise-title">
+      <div class="wrap promise-grid">
+        <div class="promise-copy">
+          <p class="eyebrow">Re-clean promise <span class="tag tag-ink">Sample</span></p>
+          <h2 id="promise-title" class="h2">Missed a spot? We come back.</h2>
+          <p class="promise-quote">Re-clean promise: tell us within 24 hours and we'll come back to fix anything we missed, at no charge.</p>
+          <!-- PLACEHOLDER: client confirms the re-clean conditions and how customers report a missed item -->
+          <div class="promise-terms">
+            <h3>The conditions, up front</h3>
+            <ul>
+              <li><strong>Within 24 hours.</strong> Tell us within 24 hours of the visit.</li>
+              <li><strong>Things we missed.</strong> It covers items on the checklist for the service you booked.</li>
+              <li><strong>No charge.</strong> The return visit to fix it costs you nothing.</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="promise-photo">
+          <img src="../assets/img/towels-stack-three-03-800.webp"
+               srcset="../assets/img/towels-stack-three-03-800.webp 800w, ../assets/img/towels-stack-three-03-1600.webp 1600w"
+               sizes="(min-width: 64em) 36vw, 100vw" width="800" height="534" loading="lazy" decoding="async"
+               alt="Two neatly folded bath towels stacked on a white table">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6. STARTING PRICES -->
+    <section class="section prices" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Starting prices <span class="tag">Sample</span></p>
+          <h2 id="prices-title" class="h2">Prices on the page. No email required.</h2>
+        </div>
+
+        <div class="price-table-wrap" role="region" aria-labelledby="price-caption" tabindex="0">
+          <table class="price-table">
+            <caption id="price-caption">Starting prices by home size and service (Sample)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Home</th>
+                <th scope="col"><span class="th-chip tone-cobalt">Standard</span></th>
+                <th scope="col"><span class="th-chip tone-tomato">Deep</span></th>
+                <th scope="col"><span class="th-chip tone-sun">Move-in/<wbr>out</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">2 bed / 1 bath</th><td><span class="from">from </span>$130</td><td><span class="from">from </span>$210</td><td><span class="from">from </span>$240</td></tr>
+              <tr><th scope="row">3 bed / 2 bath</th><td><span class="from">from </span>$160</td><td><span class="from">from </span>$270</td><td><span class="from">from </span>$300</td></tr>
+              <tr><th scope="row">4 bed / 3 bath</th><td><span class="from">from </span>$200</td><td><span class="from">from </span>$330</td><td><span class="from">from </span>$360</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="price-extras">
+          <div class="extra-card">
+            <h3>Recurring discount <span class="tag">Sample</span></h3>
+            <p class="extra-sub">Off the standard price</p>
+            <ul class="discounts">
+              <li><strong>15%</strong> weekly</li>
+              <li><strong>10%</strong> every two weeks</li>
+              <li><strong>5%</strong> monthly</li>
+            </ul>
+          </div>
+          <div class="extra-card">
+            <h3>Add-ons <span class="tag">Sample</span></h3>
+            <p class="extra-sub">Flat fee, add to any visit</p>
+            <dl class="addons">
+              <div><dt>Inside oven</dt><dd>$35</dd></div>
+              <div><dt>Inside fridge</dt><dd>$35</dd></div>
+              <div><dt>Interior windows</dt><dd>$6 per window</dd></div>
+              <div><dt>Laundry</dt><dd>$20 per load</dd></div>
+            </dl>
+          </div>
+          <div class="extra-card">
+            <h3>Custom quote</h3>
+            <p class="extra-sub">We look first, then price it</p>
+            <ul class="plain-list">
+              <li>Post-construction cleaning</li>
+              <li>Small office cleaning: a walk-through, then a monthly quote</li>
+              <li>Homes over about 4,000 sq ft</li>
+              <li>Vacation-rental turnovers: from $120 for 1 to 2 bedrooms (Sample)</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="disclaimer">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title" class="h2">Quick answers.</h2>
+          <p class="section-lede">Something else on your mind? Call <a class="link-strong" href="tel:+14695550176">(469) 555-0176</a> or add it to the notes on the form.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do I need to be home?</summary>
+            <div class="faq-a"><p>Usually not. Access is arranged with the office before the first visit.</p></div>
+          </details>
+          <details>
+            <summary>Do you bring supplies?</summary>
+            <div class="faq-a"><p>Yes, the team brings its own products and equipment. If you'd like a specific product used, tell us.</p></div>
+          </details>
+          <details>
+            <summary>What about pets?</summary>
+            <div class="faq-a"><p>Tell us about pets before the first visit. Keep pets that might slip out an open door secured. Pet accidents are not part of a standard clean.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SERVICE AREA + FORM -->
+    <section class="section area" id="quote" aria-labelledby="quote-title">
+      <div class="wrap area-grid">
+        <div class="area-copy">
+          <p class="eyebrow eyebrow-on-dark">Service area</p>
+          <h2 id="quote-title" class="h2">Collin County and nearby.</h2>
+          <p class="section-lede">Based in Allen, TX, with no storefront. We come to you in these seven places.</p>
+          <ul class="cities">
+            <li>Allen</li><li>McKinney</li><li>Plano</li><li>Fairview</li><li>Lucas</li><li>Murphy</li><li>Wylie</li>
+          </ul>
+          <p class="area-call">Rather talk? <a href="tel:+14695550176">(469) 555-0176</a></p>
+        </div>
+
+        <div class="form-card">
+          <div class="form-card-head">
+            <h3 class="form-title">Get an instant quote</h3>
+            <span class="tag tag-tomato">Preview only</span>
+          </div>
+          <p class="form-intro">Tell us about your home and we'll confirm your price before the first visit.</p>
+          <!-- PLACEHOLDER: form endpoint and email routing (transactional address) go here at launch -->
+          <form class="quote-form" id="quote-form" novalidate>
+            <div class="grid-2">
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+              <div class="field">
+                <label for="f-zip">ZIP code</label>
+                <input id="f-zip" name="zip" type="text" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required>
+              </div>
+              <div class="field">
+                <label for="f-beds">Bedrooms</label>
+                <select id="f-beds" name="bedrooms" required>
+                  <option value="">Choose</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5 or more</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-baths">Bathrooms</label>
+                <select id="f-baths" name="bathrooms" required>
+                  <option value="">Choose</option>
+                  <option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>4 or more</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-service">Service type</label>
+                <select id="f-service" name="service" required>
+                  <option value="">Choose</option>
+                  <option>Standard</option><option>Deep</option><option>Move-in/out</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-freq">Frequency</label>
+                <select id="f-freq" name="frequency" required>
+                  <option value="">Choose</option>
+                  <option>One-time</option><option>Weekly</option><option>Every two weeks</option><option>Monthly</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="f-date">Preferred start date</label>
+                <input id="f-date" name="start_date" type="date">
+              </div>
+              <div class="field field-full">
+                <label for="f-notes">Notes</label>
+                <textarea id="f-notes" name="notes" rows="4" aria-describedby="f-notes-hint"></textarea>
+                <p class="hint" id="f-notes-hint">Anything we should know, like pets or parking. Please don't include gate or alarm codes.</p>
+              </div>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="f-company-website">Company website</label>
+              <input id="f-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- PLACEHOLDER: reCAPTCHA v3 site key and script go here at launch -->
+            <button class="btn btn-tomato btn-block btn-lg" type="submit" id="f-submit" disabled>Send my quote request</button>
+            <noscript><p class="noscript-note">Submitting is disabled in this preview. Turn on JavaScript to try the form, or call (469) 555-0176.</p></noscript>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="recaptcha-note">Protected by reCAPTCHA (placeholder)</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark wordmark-footer"><span class="wordmark-main">Bur&nbsp;Oak</span><span class="wordmark-sub">Home Cleaning Co.</span></p>
+        <p>Service area only, based in Allen, TX</p>
+        <p><a href="tel:+14695550176">(469) 555-0176</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">Services</h2>
+        <ul>
+          <li>Recurring cleaning: weekly, every two weeks, monthly</li>
+          <li>Deep cleaning</li>
+          <li>Move-in and move-out</li>
+          <li>Post-construction</li>
+          <li>Vacation-rental turnovers</li>
+          <li>Small office cleaning</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-h">On this page</h2>
+        <ul>
+          <li><a href="#checklist">Room-by-room checklist</a></li>
+          <li><a href="#trust">Trust and safety</a></li>
+          <li><a href="#promise">Re-clean promise</a></li>
+          <li><a href="#prices">Starting prices</a></li>
+          <li><a href="#quote">Get an instant quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>Photos are royalty-free stock. <a href="../credits.html">Photo credits</a></p>
+      <p>Design preview prepared by Premier Code Inc.</p>
+    </div>
+  </footer>
+<!-- REMOVE AT LAUNCH: option switcher -->
+<!-- Copy this block unchanged to the end of <body> on every option page, just before </body>.
+     Per page, move aria-current="page" and the "on" class to that page's own link. Change nothing else.
+     Links are relative to option-a/, option-b/ and option-c/ folders (one level below the site root). -->
+<style class="pv-style">
+  html { scroll-padding-bottom: 6rem; }
+  footer, .site-footer, body > :last-of-type:not(script):not(nav) { padding-bottom: max(env(safe-area-inset-bottom), 5rem); }
+  .pv-switch {
+    position: fixed; left: 8px; bottom: 8px; z-index: 9999;
+    display: flex; gap: 2px; padding: 3px;
+    background: #fff; border: 1px solid #c8ccd2; border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.28);
+    font: 600 14px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .pv-switch a {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 14px; border-radius: 7px;
+    color: #111; background: transparent; text-decoration: none; white-space: nowrap;
+  }
+  .pv-switch a:hover { background: #eceef1; }
+  .pv-switch a.on { color: #fff; background: #111; }
+  .pv-switch a:focus-visible { outline: 3px solid #1a73e8; outline-offset: 1px; }
+  @media (max-width: 420px) { .pv-switch a { padding: 0 11px; font-size: 13px; } }
+  @media print { .pv-switch { display: none; } }
+</style>
+<nav class="pv-switch" aria-label="Design options">
+  <a href="../option-a/">Option A</a>
+  <a href="../option-b/">Option B</a>
+  <a href="../option-c/" class="on" aria-current="page">Option C</a>
+</nav>
+<!-- /REMOVE AT LAUNCH -->
+</body>
+</html>
