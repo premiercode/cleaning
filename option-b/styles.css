@@ -575,3 +575,8 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* a11y fixes (003 req 5) */
+:root { --field-line: #8c7f6c; }
+.book-form input, .book-form textarea, .book-form select, .field-inline select { border-color: var(--field-line); }
+.footer-brand a { display: inline-block; min-height: 24px; line-height: 24px; }

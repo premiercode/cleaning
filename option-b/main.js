@@ -99,7 +99,7 @@
         // Move focus to the first field after the jump
         setTimeout(function () {
           var first = document.getElementById('f-name');
-          if (first) first.focus({ preventScroll: true });
+          if (first) first.focus();
         }, reduceMotion ? 0 : 500);
       });
     }

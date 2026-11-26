@@ -143,7 +143,7 @@
             <div class="price-panel">
               <p class="price-label">Sample price range <span class="price-per">per visit</span></p>
               <!-- PLACEHOLDER: pricing logic. Base = larger of bedroom or bathroom tier from the sample table; recurring discount on standard only; range = from price to about +25%; 5+ bedrooms or 4+ bathrooms shows "custom quote" -->
-              <output class="price" id="price-out" for="quote-widget">
+              <output class="price" id="price-out" for="quote-widget" aria-live="off">
                 <span class="price-static">from <strong>$130</strong> <span class="tag">Sample</span></span>
               </output>
               <svg class="burst b1" aria-hidden="true"><use href="#spark"/></svg>
@@ -471,6 +471,7 @@
           <p class="form-intro">Send your details and the office will confirm your price. <span class="tag">Preview only</span></p>
           <!-- PLACEHOLDER: form endpoint (no action attribute in this preview) -->
           <form class="lead-form" id="lead-form" novalidate>
+            <p class="req-note">All fields are required unless marked optional.</p>
             <div class="field">
               <label for="f-name">Name</label>
               <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -491,7 +492,7 @@
                 <input id="f-zip" name="zip" type="text" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required>
               </div>
               <div class="field">
-                <label for="f-date">Preferred start date</label>
+                <label for="f-date">Preferred start date <span class="optional">(optional)</span></label>
                 <input id="f-date" name="start_date" type="date">
               </div>
             </div>
@@ -524,7 +525,7 @@
               </div>
             </div>
             <div class="field">
-              <label for="f-notes">Notes</label>
+              <label for="f-notes">Notes <span class="optional">(optional)</span></label>
               <textarea id="f-notes" name="notes" rows="3" aria-describedby="f-notes-help"></textarea>
               <p class="help" id="f-notes-help">Anything we should know, like pets or parking. Please don't include gate or alarm codes.</p>
             </div>

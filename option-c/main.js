@@ -98,7 +98,7 @@
         else if (service === 'deep' && freq !== '0') note = 'Recurring discounts apply to standard cleans.';
       }
 
-      priceEl.textContent = text;
+      if (priceEl.textContent !== text) priceEl.textContent = text;
       summaryEl.textContent = summary;
       noteEl.textContent = note;
 
