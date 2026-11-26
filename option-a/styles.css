@@ -791,6 +791,7 @@ body > .page.page { padding-bottom: 0; }
 /* a11y fixes (003 req 5). Unlayered so they win over the @layer rules above. */
 .field input, .field select, .field textarea { border-color: #7a8f9c; }
 .field input:hover, .field select:hover, .field textarea:hover { border-color: #4f6472; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { border-color: var(--sky-700); }
 .site-footer :focus-visible { outline-color: #6fe3bf; }
 /* WCAG 2.2.2: no auto-playing decorative motion longer than 5 seconds */
 .quote-card::before { animation-duration: 4.5s; animation-iteration-count: 1; }

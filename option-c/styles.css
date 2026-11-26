@@ -662,7 +662,7 @@ a[href^="tel:"] { white-space: nowrap; }
 
 /* a11y fixes (003 req 5) */
 .cl-panel:focus-visible { outline-color: var(--ink); }
-@media (max-width: 22.5em) { .seg-options label, .seg-options button { white-space: normal; } }
+@media (max-width: 22.5em) { .seg-options label, .seg-options button, .seg span { white-space: normal; } }
 .room img.img-bed { object-position: 50% 72%; }
 .optional { font-weight: 400; opacity: .85; }
 .req-note { font-size: var(--text-sm); margin: 0 0 var(--s-4); }
