@@ -171,6 +171,10 @@ main:focus { outline: none; }
   .btn, .btn:hover, .btn:active { transition: none; transform: none; }
 }
 
+/* Page wrapper: the only body child before the switcher, so it alone takes the switcher's bottom padding */
+.page { background: var(--ink); }
+.page > main { background: var(--paper); }
+
 /* ---------- Preview bar ---------- */
 .preview-bar { background: var(--ink); color: var(--on-dark); font-size: var(--text-xs); line-height: 1.45; }
 .preview-bar p { max-width: var(--wrap); margin-inline: auto; padding: 0.55rem clamp(1rem, 4vw, 2.5rem); }
@@ -251,11 +255,8 @@ main:focus { outline: none; }
   aspect-ratio: 16 / 9; margin-top: -2.5rem; margin-inline: 1.5rem -0.5rem;
 }
 @media (max-width: 63.99em) {
-  .hero-grid { gap: 0; }
-  .hero-copy { display: contents; }
-  .hero-copy > * { order: 0; }
-  .ticket-wrap { order: 1; margin-top: var(--s-8); }
-  .hero-proof { order: 2; margin-top: var(--s-10); }
+  /* Ticket starts below the hero copy, so the switcher's bottom-left corner sits over blue space, not a control */
+  .hero-grid { gap: var(--s-12); }
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -285,6 +286,7 @@ main:focus { outline: none; }
 }
 .seg-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-2); }
 .seg-options.seg-3 { grid-template-columns: repeat(3, 1fr); }
+.seg-options.seg-service { grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 1.35fr); }
 .seg-options.seg-2x2 { grid-template-columns: repeat(2, 1fr); }
 .seg label { position: relative; display: block; }
 .seg input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
@@ -292,7 +294,7 @@ main:focus { outline: none; }
   display: flex; align-items: center; justify-content: center; text-align: center;
   min-height: 44px; padding: 0.35rem 0.4rem;
   border: var(--line-thin); border-radius: var(--r-sm);
-  font-weight: 700; font-size: var(--text-sm); line-height: 1.15;
+  font-weight: 700; font-size: 0.875rem; line-height: 1.15; white-space: nowrap;
   background: var(--paper); cursor: pointer;
   transition: background-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
 }
@@ -332,7 +334,7 @@ main:focus { outline: none; }
 
 @media (min-width: 40em) {
   .seg { display: flex; align-items: center; gap: var(--s-3); }
-  .seg legend { float: left; margin: 0; width: 6.5rem; flex: none; }
+  .seg legend { float: left; margin: 0; width: 6rem; flex: none; }
   .seg-options { flex: 1; }
   .ticket { padding: var(--s-6); }
   .ticket-perf { margin-inline: calc(var(--s-6) * -1); }

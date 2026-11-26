@@ -22,6 +22,7 @@
   <script src="main.js" defer></script>
 </head>
 <body>
+  <div class="page">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -90,8 +91,8 @@
         <div class="hero-stage">
           <figure class="hero-photo">
             <picture>
-              <source type="image/webp" srcset="../assets/img/window-sheer-curtains-sunlight-01-800.webp 800w, ../assets/img/window-sheer-curtains-sunlight-01-1600.webp 1600w" sizes="(min-width: 64em) 30vw, 60vw">
-              <img src="../assets/img/window-sheer-curtains-sunlight-01-800.webp" width="800" height="1200" alt="Sunlight pouring through sheer white curtains into a calm, tidy room" fetchpriority="high">
+              <source type="image/webp" srcset="../assets/img/kitchen-pendant-lights-05-800.webp 800w, ../assets/img/kitchen-pendant-lights-05-1600.webp 1600w, ../assets/img/kitchen-pendant-lights-05-2400.webp 2400w" sizes="(min-width: 64em) 30vw, 60vw">
+              <img src="../assets/img/kitchen-pendant-lights-05-800.webp" width="800" height="534" alt="Open white kitchen with a marble island, black pendant lights and wood floors" fetchpriority="high">
             </picture>
           </figure>
 
@@ -380,9 +381,9 @@
                   <tr><th scope="col">Home</th><th scope="col">Standard, from</th><th scope="col">Deep, from</th><th scope="col">Move-in/out, from</th></tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">2 bed / 1 bath</th><td>$130</td><td>$210</td><td>$240</td></tr>
-                  <tr><th scope="row">3 bed / 2 bath</th><td>$160</td><td>$270</td><td>$300</td></tr>
-                  <tr><th scope="row">4 bed / 3 bath</th><td>$200</td><td>$330</td><td>$360</td></tr>
+                  <tr><th scope="row">2 bed / 1 bath</th><td data-label="Standard, from">$130</td><td data-label="Deep, from">$210</td><td data-label="Move-in/out, from">$240</td></tr>
+                  <tr><th scope="row">3 bed / 2 bath</th><td data-label="Standard, from">$160</td><td data-label="Deep, from">$270</td><td data-label="Move-in/out, from">$300</td></tr>
+                  <tr><th scope="row">4 bed / 3 bath</th><td data-label="Standard, from">$200</td><td data-label="Deep, from">$330</td><td data-label="Move-in/out, from">$360</td></tr>
                 </tbody>
               </table>
             </div>
@@ -569,6 +570,7 @@
       </div>
     </div>
   </footer>
+  </div>
 <!-- REMOVE AT LAUNCH: option switcher -->
 <!-- Copy this block unchanged to the end of <body> on every option page, just before </body>.
      Per page, move aria-current="page" and the "on" class to that page's own link. Change nothing else.
