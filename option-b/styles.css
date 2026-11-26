@@ -60,8 +60,9 @@
 }
 
 /* Large monitors: scale the whole system gently */
-@media (min-width: 2200px) { html { font-size: 112.5%; } }
-@media (min-width: 2800px) { html { font-size: 125%; } }
+@media (min-width: 2000px) { html { font-size: 112.5%; } }
+@media (min-width: 2400px) { html { font-size: 125%; } }
+@media (min-width: 2800px) { html { font-size: 140%; } }
 
 /* ---------- Reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -194,6 +195,23 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
   .site-nav ul { justify-content: center; gap: var(--space-4); padding: 0; }
 }
 
+.header-call {
+  grid-column: 2; grid-row: 2; justify-self: end; align-self: center;
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 64px; padding: 0 1rem;
+  border: 1px solid var(--charcoal); border-radius: var(--radius); font-size: 0.84rem; font-weight: 600; letter-spacing: 0.04em; text-decoration: none;
+}
+.header-call:hover { background: var(--charcoal); color: var(--on-dark); }
+@media (max-width: 639px) {
+  .site-nav { grid-column: 1 / 2; margin-right: 0; }
+  .site-nav ul { gap: 0; padding-inline: calc(var(--gutter) - 0.45rem) 0; }
+  .site-nav a { padding-inline: 0.45rem; font-size: 0.82rem; letter-spacing: 0.01em; }
+}
+@media (max-width: 419px) {
+  .site-nav li:first-child { display: none; } /* "Included" is the next section down; keeps Trust, Prices, FAQ and Call on one row */
+  .header-inner { grid-template-columns: 1fr auto; }
+}
+@media (min-width: 640px) { .header-call { display: none; } }
+
 /* ---------- Eyebrows, sections ---------- */
 .eyebrow {
   font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
@@ -237,7 +255,8 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
   .lede { margin-top: var(--space-3); font-size: 1rem; line-height: 1.55; }
   .header-inner { padding-block: var(--space-3) 0; row-gap: var(--space-1); }
   /* Price first on small screens, so the answer sits on the first screen above the controls */
-  .js .estimate-result { order: -1; margin-top: 0; padding-top: 0; border-top: 0; padding-bottom: var(--space-4); border-bottom: 1px solid var(--hairline); }
+  .js .estimate-disclaimer { order: -1; margin-top: 0; padding-bottom: var(--space-4); }
+  .js .estimate-result { order: -2; margin-top: 0; padding-top: 0; border-top: 0; padding-bottom: var(--space-4); border-bottom: 1px solid var(--hairline); }
   .estimate-head { margin-bottom: var(--space-3); }
 }
 .hero-grid {
@@ -249,7 +268,9 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
 .hero-photo { grid-area: photo; }
 .estimate { grid-area: estimate; }
 
-.hero h1 { font-size: var(--display-lg); font-weight: 500; line-height: 1.04; letter-spacing: -0.015em; max-width: 14ch; }
+.hero h1 { font-size: var(--display-lg); font-weight: 500; line-height: 1.04; letter-spacing: -0.015em; max-width: 17ch; text-wrap: balance; }
+.hero h1 em { text-wrap: balance; }
+.nowrap { white-space: nowrap; }
 .hero h1 em { display: block; font-style: italic; font-weight: 400; color: var(--bronze-deep); margin-top: 0.12em; }
 .lede { margin-top: var(--space-6); font-size: var(--text-lg); line-height: 1.65; color: var(--ink-muted); max-width: 34rem; }
 .hero-notes { margin-top: var(--space-2); display: grid; gap: var(--space-3); border-top: 1px solid var(--hairline); padding-top: var(--space-5); max-width: 34rem; }
@@ -258,18 +279,18 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
 .hero-notes .tag { margin-left: 0.35rem; }
 
 .hero-photo { position: relative; overflow: hidden; background: var(--linen-deep); aspect-ratio: 4 / 3; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .hero-grid { grid-template-columns: 1.1fr 1fr; grid-template-areas: "copy estimate" "notes estimate" "photo photo"; align-items: start; }
   .hero-photo { aspect-ratio: 21 / 8; }
-  .hero-photo img { object-position: 50% 62%; }
+  .hero-photo img { object-position: 60% 70%; }
 }
 @media (min-width: 1200px) {
   .hero { padding-block: 0; }
   .hero-grid {
     min-height: min(calc(100svh - 7.5rem), 1000px);
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 27rem) minmax(0, 0.8fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 25.5rem) minmax(0, 1fr);
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-areas: ". estimate photo" "copy estimate photo" "notes estimate photo" ". estimate photo";
     gap: 0 clamp(2rem, 3vw, 4rem);
@@ -279,7 +300,12 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
   .hero h1 { font-size: clamp(2.7rem, 1rem + 2.6vw, 4.2rem); }
   .hero-notes { margin-top: var(--space-8); align-self: start; }
   .estimate { align-self: center; }
-  .hero-photo { aspect-ratio: auto; align-self: stretch; min-height: 34rem; }
+  /* Photo bleeds to the right edge of the viewport for a wider, calmer image */
+  .hero-photo {
+    aspect-ratio: auto; align-self: stretch; min-height: 34rem;
+    margin-right: calc(-1 * (max(0px, (100vw - var(--container)) / 2) + var(--gutter)));
+  }
+  .hero-photo img { object-position: 74% 50%; }
 }
 
 /* ---------- Estimate card ---------- */
@@ -348,15 +374,23 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
 .estimate-disclaimer { margin-top: var(--space-3); font-size: 0.74rem; line-height: 1.5; color: var(--ink-muted); }
 
 /* ---------- Rooms ---------- */
-.rooms { display: grid; gap: var(--space-12) var(--space-8); }
+.rooms-layout { display: grid; gap: var(--space-10); }
+.rooms-photo { overflow: hidden; background: var(--linen-deep); aspect-ratio: 4 / 3; }
+.rooms-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; }
+@media (min-width: 1024px) {
+  .rooms-layout { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--space-16); align-items: stretch; }
+  .rooms-photo { aspect-ratio: auto; min-height: 30rem; }
+  .rooms-photo img { object-position: 50% 70%; }
+}
+.rooms { display: grid; gap: var(--space-10) var(--space-10); align-content: start; }
 .room img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--linen-deep); }
-.room h3 { font-size: var(--display-sm); margin-top: var(--space-5); padding-bottom: var(--space-3); border-bottom: 1px solid var(--hairline); }
+.room h3 { font-size: var(--display-sm); padding-bottom: var(--space-3); border-bottom: 1px solid var(--hairline); }
 .room ul { margin-top: var(--space-4); display: grid; gap: var(--space-2); }
 .room li { font-size: 0.95rem; color: var(--charcoal); padding-left: 1.2rem; position: relative; line-height: 1.5; }
 .room li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.55rem; height: 1px; background: var(--bronze); }
 
 @media (min-width: 720px) { .rooms { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1200px) { .rooms { grid-template-columns: repeat(4, 1fr); } }
+
 
 .extras {
   margin-top: clamp(3rem, 2rem + 3vw, 5rem);

@@ -47,7 +47,7 @@
       <div class="header-actions">
         <!-- PLACEHOLDER: client's real phone number (469 555-0176 is fictional) -->
         <a class="header-phone" href="tel:+14695550176"><span class="visually-hidden">Call </span>(469) 555-0176</a>
-        <a class="btn btn-tomato btn-sm" href="#quote">Get an instant quote</a>
+        <a class="btn btn-tomato btn-sm" href="#instant-quote">Get an instant quote</a>
       </div>
     </div>
   </header>
@@ -55,17 +55,16 @@
   <main id="main" tabindex="-1">
 
     <!-- 1. HERO + QUOTE TICKET -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="instant-quote" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow eyebrow-on-dark">House cleaning in Collin County and nearby</p>
+          <p class="eyebrow eyebrow-on-dark">Collin County house cleaning <span class="tag tag-sun">Sample</span></p>
           <h1 id="hero-title" class="hero-title">See your price. <span class="hl">Check every room.</span></h1>
-          <p class="hero-lede">Pick your home size and get a sample price range right here, no email or phone number needed. Then see exactly what gets cleaned, room by room.</p>
+          <p class="hero-lede">Get a sample price right here, no email needed. Then see what gets cleaned in every room.</p>
           <ul class="hero-proof draw-group" aria-label="What you can check">
             <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#trust">Background check before the first visit</a></li>
             <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#promise">Re-clean promise, within 24 hours</a></li>
             <li><svg class="tick" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 17.5c2.2 1.4 4.6 4 6.4 7.1 3.4-7.6 8.6-14 15.6-19.6"/></svg><a href="#checklist">A written list for every room</a></li>
-            <li class="hero-proof-tag"><span class="tag tag-sun">Sample</span></li>
           </ul>
         </div>
 
@@ -136,7 +135,7 @@
               <p class="ticket-preview"><span class="tag tag-tomato">Preview only</span> Sample price, preview only. Nothing is booked or sent.</p>
             </div>
 
-            <a class="btn btn-tomato btn-block" href="#quote">Get an instant quote</a>
+            <a class="btn btn-tomato btn-block" href="#quote" id="q-request">Request this cleaning</a>
             <p class="ticket-fine">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
           </form>
         </div>
@@ -203,8 +202,8 @@
               </div>
             </article>
             <article class="room draw-group">
-              <img src="../assets/img/living-room-gray-sofa-03-800.webp" width="800" height="534" loading="lazy" decoding="async"
-                   alt="Tidy living room with a gray sofa and wood coffee table, open to the dining area and kitchen">
+              <img class="img-mop" src="../assets/img/mop-tile-floor-04-800.webp" width="800" height="1200" loading="lazy" decoding="async"
+                   alt="Person mopping a tile floor in a living room, with a blue bucket nearby">
               <div class="room-body">
                 <h3 class="room-title"><span class="room-num" aria-hidden="true">04</span> Living areas</h3>
                 <ul class="items">
@@ -348,10 +347,10 @@
           </div>
         </div>
         <figure class="promise-photo">
-          <img src="../assets/img/towels-stack-three-03-800.webp"
-               srcset="../assets/img/towels-stack-three-03-800.webp 800w, ../assets/img/towels-stack-three-03-1600.webp 1600w"
+          <img src="../assets/img/gloves-spray-bottle-blue-04-800.webp"
+               srcset="../assets/img/gloves-spray-bottle-blue-04-800.webp 800w, ../assets/img/gloves-spray-bottle-blue-04-1600.webp 1600w"
                sizes="(min-width: 64em) 36vw, 100vw" width="800" height="534" loading="lazy" decoding="async"
-               alt="Two neatly folded bath towels stacked on a white table">
+               alt="Gloved hand holding a blue spray bottle over a wooden surface">
         </figure>
       </div>
     </section>
@@ -459,10 +458,11 @@
 
         <div class="form-card">
           <div class="form-card-head">
-            <h3 class="form-title">Get an instant quote</h3>
+            <h3 class="form-title">Request your cleaning</h3>
             <span class="tag tag-tomato">Preview only</span>
           </div>
           <p class="form-intro">Tell us about your home and we'll confirm your price before the first visit.</p>
+          <p class="prefill-note" id="prefill-note" role="status" aria-live="polite"></p>
           <!-- PLACEHOLDER: form endpoint and email routing (transactional address) go here at launch -->
           <form class="quote-form" id="quote-form" novalidate>
             <div class="grid-2">
@@ -562,7 +562,8 @@
           <li><a href="#trust">Trust and safety</a></li>
           <li><a href="#promise">Re-clean promise</a></li>
           <li><a href="#prices">Starting prices</a></li>
-          <li><a href="#quote">Get an instant quote</a></li>
+          <li><a href="#instant-quote">Get an instant quote</a></li>
+          <li><a href="#quote">Request your cleaning</a></li>
         </ul>
       </div>
     </div>

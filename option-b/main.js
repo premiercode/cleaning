@@ -33,6 +33,11 @@
     var type = checked('est-type');
     var freq = form.querySelector('#est-freq').value;
 
+    // Larger than the Sample table: custom quote, no price shown
+    if (beds === '5' || baths === '4') {
+      return { text: 'Custom quote', detail: 'Homes larger than 4 bedrooms and 3 bathrooms are quoted individually and confirmed before the first visit.' };
+    }
+
     // The larger of the two picks the closest row in the Sample table
     var row = Math.max(BED_ROW[beds], BATH_ROW[baths]);
     var base = PRICES[type][row];

@@ -112,6 +112,34 @@
 
     widget.addEventListener('change', update);
     update();
+
+    // "Request this cleaning": carry the ticket choices into the form, then move there
+    var requestBtn = document.getElementById('q-request');
+    var BEDS_TO_FORM = { '0': '2', '1': '3', '2': '4', custom: '5 or more' };
+    var BATHS_TO_FORM = { '0': '1', '1': '2', '2': '3' };
+    var SERVICE_TO_FORM = { standard: 'Standard', deep: 'Deep', move: 'Move-in/out' };
+    var FREQ_TO_FORM = { '0': 'One-time', '0.15': 'Weekly', '0.10': 'Every two weeks', '0.05': 'Monthly' };
+    var setSelect = function (id, value) {
+      var el = document.getElementById(id);
+      if (el && value) el.value = value;
+    };
+    if (requestBtn) {
+      requestBtn.addEventListener('click', function (e) {
+        var target = document.getElementById('quote');
+        if (!target) return;
+        e.preventDefault();
+        setSelect('f-beds', BEDS_TO_FORM[val('q-beds')]);
+        setSelect('f-baths', BATHS_TO_FORM[val('q-baths')]);
+        setSelect('f-service', SERVICE_TO_FORM[val('q-service')]);
+        setSelect('f-freq', FREQ_TO_FORM[val('q-freq')]);
+        var note = document.getElementById('prefill-note');
+        if (note) note.textContent = 'We filled in your home details from the quote. Change anything you like.';
+        target.scrollIntoView({ behavior: motionOK ? 'smooth' : 'auto', block: 'start' });
+        var first = document.getElementById('f-name');
+        if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, motionOK ? 450 : 0);
+        if (history.replaceState) history.replaceState(null, '', '#quote');
+      });
+    }
   }
 
   /* ---------- Checklist tabs ---------- */

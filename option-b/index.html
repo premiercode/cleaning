@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap">
-  <link rel="preload" as="image" href="../assets/img/window-sheer-curtains-sunlight-01-800.webp" imagesrcset="../assets/img/window-sheer-curtains-sunlight-01-800.webp 800w, ../assets/img/window-sheer-curtains-sunlight-01-1600.webp 1600w" imagesizes="(min-width: 1024px) 42vw, 100vw">
+  <link rel="preload" as="image" href="../assets/img/kitchen-sink-window-07-1600.webp" imagesrcset="../assets/img/kitchen-sink-window-07-800.webp 800w, ../assets/img/kitchen-sink-window-07-1600.webp 1600w, ../assets/img/kitchen-sink-window-07-2400.webp 2400w" imagesizes="(min-width: 1200px) 40vw, 100vw">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -37,11 +37,12 @@
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#included">Included</a></li>
-          <li><a href="#trust">Our people</a></li>
+          <li><a href="#trust">Trust</a></li>
           <li><a href="#prices">Prices</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
+      <a class="header-call" href="tel:+14695550176" aria-label="Call (469) 555-0176">Call</a>
       <div class="header-actions">
         <!-- PLACEHOLDER: real business phone number -->
         <a class="header-phone" href="tel:+14695550176"><span class="visually-hidden">Call </span>(469) 555-0176</a>
@@ -62,16 +63,16 @@
         </div>
 
         <ul class="hero-notes" aria-label="At a glance">
-          <li>Criminal background check before every cleaner's first visit <span class="tag">Sample</span></li>
+          <li>Criminal background check before every cleaner's <span class="nowrap">first visit <span class="tag">Sample</span></span></li>
           <li>Re-clean promise within 24 hours <span class="tag">Sample</span></li>
         </ul>
 
         <figure class="hero-photo">
-          <img src="../assets/img/window-sheer-curtains-sunlight-01-800.webp"
-               srcset="../assets/img/window-sheer-curtains-sunlight-01-800.webp 800w, ../assets/img/window-sheer-curtains-sunlight-01-1600.webp 1600w"
-               sizes="(min-width: 1024px) 42vw, 100vw"
-               width="800" height="1200"
-               alt="Sunlight pouring through sheer white curtains into a calm, tidy room"
+          <img src="../assets/img/kitchen-sink-window-07-1600.webp"
+               srcset="../assets/img/kitchen-sink-window-07-800.webp 800w, ../assets/img/kitchen-sink-window-07-1600.webp 1600w, ../assets/img/kitchen-sink-window-07-2400.webp 2400w"
+               sizes="(min-width: 1200px) 40vw, 100vw"
+               width="1600" height="1067"
+               alt="White kitchen with gold cabinet pulls, an island sink and a sunny dining area beyond"
                fetchpriority="high">
         </figure>
 
@@ -85,6 +86,7 @@
           <div class="estimate-static">
             <p class="estimate-price-static">from $130 <span class="tag">Sample</span></p>
             <p class="estimate-small">Standard clean, 2 bedrooms and 1 bathroom. <a href="#prices">See every Sample price</a>.</p>
+            <p class="estimate-disclaimer">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
           </div>
 
           <form class="estimate-form" id="estimate-form" aria-describedby="estimate-disclaimer">
@@ -94,6 +96,7 @@
                 <input type="radio" name="est-beds" id="eb2" value="2" checked><label for="eb2">1 to 2</label>
                 <input type="radio" name="est-beds" id="eb3" value="3"><label for="eb3">3</label>
                 <input type="radio" name="est-beds" id="eb4" value="4"><label for="eb4">4</label>
+                <input type="radio" name="est-beds" id="eb5" value="5"><label for="eb5">5+</label>
               </div>
             </fieldset>
             <fieldset class="seg">
@@ -102,6 +105,7 @@
                 <input type="radio" name="est-baths" id="ea1" value="1" checked><label for="ea1">1</label>
                 <input type="radio" name="est-baths" id="ea2" value="2"><label for="ea2">2</label>
                 <input type="radio" name="est-baths" id="ea3" value="3"><label for="ea3">3</label>
+                <input type="radio" name="est-baths" id="ea4" value="4"><label for="ea4">4+</label>
               </div>
             </fieldset>
             <fieldset class="seg">
@@ -131,9 +135,9 @@
             </div>
 
             <a class="btn btn-primary btn-block" href="#book" id="est-cta">Request this estimate</a>
+            <p class="estimate-disclaimer" id="estimate-disclaimer">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
           </form>
 
-          <p class="estimate-disclaimer" id="estimate-disclaimer">Sample prices for demonstration only. Final price depends on home size, condition, pets and add-ons, and is confirmed before the first visit. Plus applicable sales tax.</p>
         </section>
       </div>
     </section>
@@ -149,13 +153,16 @@
           </div>
         </header>
 
+        <div class="rooms-layout">
+          <figure class="rooms-photo reveal">
+            <img src="../assets/img/window-sheer-curtains-sunlight-01-800.webp"
+                 srcset="../assets/img/window-sheer-curtains-sunlight-01-800.webp 800w, ../assets/img/window-sheer-curtains-sunlight-01-1600.webp 1600w"
+                 sizes="(min-width: 1024px) 34vw, 100vw"
+                 width="800" height="1200" loading="lazy"
+                 alt="Sunlight pouring through sheer white curtains into a calm, tidy room">
+          </figure>
         <div class="rooms">
           <article class="room reveal">
-            <img src="../assets/img/kitchen-sink-window-07-800.webp"
-                 srcset="../assets/img/kitchen-sink-window-07-800.webp 800w, ../assets/img/kitchen-sink-window-07-1600.webp 1600w"
-                 sizes="(min-width: 1440px) 340px, (min-width: 720px) 45vw, 100vw"
-                 width="800" height="534" loading="lazy"
-                 alt="White kitchen with gold cabinet pulls, an island sink and a sunny dining area beyond">
             <h3>Kitchen</h3>
             <ul>
               <li>Counters and backsplash wiped and sanitized</li>
@@ -166,11 +173,6 @@
             </ul>
           </article>
           <article class="room reveal">
-            <img src="../assets/img/bathroom-shower-vanity-01-800.webp"
-                 srcset="../assets/img/bathroom-shower-vanity-01-800.webp 800w, ../assets/img/bathroom-shower-vanity-01-1600.webp 1600w"
-                 sizes="(min-width: 1440px) 340px, (min-width: 720px) 45vw, 100vw"
-                 width="800" height="534" loading="lazy"
-                 alt="Modern bathroom with a glass shower, soaking tub and double vanity">
             <h3>Bathrooms</h3>
             <ul>
               <li>Toilet, tub and shower cleaned and disinfected</li>
@@ -180,11 +182,6 @@
             </ul>
           </article>
           <article class="room reveal">
-            <img src="../assets/img/bedroom-white-comforter-01-800.webp"
-                 srcset="../assets/img/bedroom-white-comforter-01-800.webp 800w, ../assets/img/bedroom-white-comforter-01-1600.webp 1600w"
-                 sizes="(min-width: 1440px) 340px, (min-width: 720px) 45vw, 100vw"
-                 width="800" height="467" loading="lazy"
-                 alt="Neatly made bed with white bedding, lamps on both sides and a dark wood dresser">
             <h3>Bedrooms</h3>
             <ul>
               <li>Reachable surfaces dusted</li>
@@ -194,11 +191,6 @@
             </ul>
           </article>
           <article class="room reveal">
-            <img src="../assets/img/living-room-gray-sofa-03-800.webp"
-                 srcset="../assets/img/living-room-gray-sofa-03-800.webp 800w, ../assets/img/living-room-gray-sofa-03-1600.webp 1600w"
-                 sizes="(min-width: 1440px) 340px, (min-width: 720px) 45vw, 100vw"
-                 width="800" height="534" loading="lazy"
-                 alt="Tidy living room with a gray sofa and wood coffee table, open to the dining area and kitchen">
             <h3>Living areas</h3>
             <ul>
               <li>Dusting</li>
@@ -207,6 +199,7 @@
               <li>Tidying</li>
             </ul>
           </article>
+        </div>
         </div>
 
         <div class="extras reveal">

@@ -111,7 +111,6 @@
     vertical-align: .15em; white-space: nowrap;
   }
   .tag-live { color: var(--sky-700); background: var(--sky-50); border-color: var(--sky-200); }
-  .tag-live::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: #0d8c6e; box-shadow: 0 0 0 3px rgb(13 140 110 / .18); }
   .tag-light { color: #fff; background: rgb(255 255 255 / .16); border-color: rgb(255 255 255 / .4); }
 
   /* ---------- Preview bar ---------- */
@@ -243,7 +242,15 @@
       radial-gradient(50rem 30rem at 5% 65%, rgb(111 227 191 / .22), transparent 60%),
       var(--bg);
   }
-  .hero-sky { position: absolute; inset: 0; z-index: -1; pointer-events: none; mask-image: linear-gradient(#000 65%, transparent); -webkit-mask-image: linear-gradient(#000 65%, transparent); }
+  .hero-sky, .book-sky { position: absolute; inset: 0; left: 50%; right: auto; width: min(100%, calc(var(--wrap) + 24rem)); translate: -50% 0; }
+  .hero-sky { z-index: -1; pointer-events: none; }
+  .hero-sky, .book-sky {
+    -webkit-mask-image: linear-gradient(#000 65%, transparent), linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(#000 65%, transparent), linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+    mask-composite: intersect;
+  }
+  .book-sky { -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
   .hero-sky::after {
     content: ""; position: absolute; inset: 0;
     background-image: radial-gradient(rgb(10 90 156 / .12) 1.2px, transparent 1.4px);
@@ -266,12 +273,12 @@
   .hero-grid { display: grid; gap: 1.75rem clamp(2rem, 5vw, 4rem); align-items: center; }
   .hero-title {
     font-family: var(--font-display); font-weight: 650; font-variation-settings: "wdth" 112;
-    font-size: clamp(2.9rem, 1.2rem + 5.4vw, 6.5rem); line-height: .95; letter-spacing: -.035em;
+    font-size: clamp(2.7rem, 1.2rem + 5.4vw, 5.75rem); line-height: .95; letter-spacing: -.035em;
   }
   .hero-title .line { display: block; overflow: hidden; padding-bottom: .08em; margin-bottom: -.08em; }
   .hero-title .line > span { display: inline-block; }
   .hero-title .hl { position: relative; }
-  .hero-lede { font-size: clamp(1.05rem, .95rem + .5vw, 1.3rem); color: var(--ink-2); max-width: 33rem; margin-top: 1.25rem; }
+  .hero-lede { font-size: clamp(1.05rem, .95rem + .5vw, 1.3rem); color: var(--ink-2); max-width: 33rem; margin-top: clamp(.9rem, 2vw, 1.25rem); }
   .hero-proof { display: flex; flex-wrap: wrap; gap: .6rem; }
   .hero-proof li {
     display: inline-flex; align-items: center; gap: .5rem; flex-wrap: wrap;
@@ -279,27 +286,31 @@
     background: rgb(255 255 255 / .8); border: 1px solid var(--line); font-weight: 600; font-size: .95rem;
     box-shadow: 0 6px 18px -12px rgb(10 90 156 / .4);
   }
+  .hero-proof li { flex-wrap: nowrap; }
+  .hero-proof .tag { vertical-align: 0; }
   .hero-proof svg { width: 1.5rem; height: 1.5rem; padding: .25rem; border-radius: 50%; background: var(--mint); color: var(--ink); flex: none; }
 
   .hero-stage { position: relative; }
   .hero-photo { display: none; }
 
   @media (min-width: 64em) {
-    .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); grid-template-areas: "copy stage" "proof stage"; row-gap: 2rem; }
+    .hero-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); grid-template-areas: "copy stage" "proof stage"; row-gap: 2rem; }
     .hero-copy { grid-area: copy; align-self: end; }
     .hero-proof { grid-area: proof; align-self: start; }
     .hero-stage { grid-area: stage; display: grid; align-items: center; }
     .hero-photo {
-      display: block; position: absolute; top: -1.75rem; bottom: -1.75rem; right: 0; width: 46%;
+      display: block; position: absolute; top: -1.75rem; bottom: -1.75rem; right: 0; width: 60%;
       border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-card);
     }
     .hero-photo picture { height: 100%; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
     .hero-photo::after {
       content: ""; position: absolute; inset: 0;
       background: linear-gradient(200deg, rgb(124 200 255 / .25), transparent 50%, rgb(111 227 191 / .25));
     }
-    .quote-card { width: 80%; }
+    .quote-card { width: min(31rem, 72%); }
+    .seg-wrap label { flex: 1 1 auto; }
+    .seg-wrap span { padding-inline: .55rem; }
   }
 
   /* ---------- Quote card ---------- */
@@ -372,6 +383,13 @@
   .b2 { top: 2.6rem; right: 3.4rem; width: 12px; height: 12px; fill: #3aaef5; }
   .b3 { top: 3.6rem; right: 1rem; width: 10px; height: 10px; }
 
+  @media (max-width: 63.99em) {
+    .quote-card { display: flex; flex-direction: column; }
+    .quote-head { order: 0; }
+    .price-panel { order: 1; margin: 0 0 1.1rem; }
+    .quote-form { order: 2; }
+    .quote-note { order: 3; }
+  }
   /* No-JS: static widget */
   html:not(.js) .quote-form { display: none; }
   html:not(.js) .price-panel { margin-top: 0; }
@@ -390,6 +408,7 @@
   .room-img { aspect-ratio: 16 / 9; overflow: hidden; }
   @media (min-width: 40em) { .room-img { aspect-ratio: 4 / 3; } }
   .room-img picture { height: 100%; }
+  .room-img img.pos-mop { object-position: 50% 58%; }
   .room-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
   .room:hover .room-img img { transform: scale(1.05); }
   .room-body { padding: 1.4rem 1.4rem 1.6rem; }
@@ -616,7 +635,7 @@
 
   /* ---------- Booking ---------- */
   .book { overflow: hidden; isolation: isolate; background: var(--sky-50); }
-  .book-sky { position: absolute; inset: 0; z-index: -1; }
+  .book-sky { z-index: -1; }
   .book .blob-mint { left: auto; right: -10rem; bottom: -12rem; opacity: .45; }
   .book .blob-sky { right: auto; left: -14rem; top: -16rem; opacity: .5; }
   .book-grid { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
