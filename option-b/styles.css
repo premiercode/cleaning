@@ -246,7 +246,7 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
 }
 
 /* ---------- Hero ---------- */
-.hero { padding-block: clamp(1.75rem, 1rem + 4vw, 5rem); }
+.hero { padding-block: clamp(1.75rem, 1rem + 4vw, 5rem); overflow-x: clip; }
 @media (max-width: 767px) {
   .hero-grid { gap: var(--space-6); }
   .hero .eyebrow { display: none; } /* the lede and the service-area section carry location on small screens */
@@ -303,7 +303,8 @@ h2 .tag, h3 .tag { position: relative; top: -0.2em; margin-left: 0.4em; }
   /* Photo bleeds to the right edge of the viewport for a wider, calmer image */
   .hero-photo {
     aspect-ratio: auto; align-self: stretch; min-height: 34rem;
-    margin-right: calc(-1 * (max(0px, (100vw - var(--container)) / 2) + var(--gutter)));
+    /* Bleed past the content edge, capped so it never runs far beyond the layout on very wide screens */
+    margin-right: calc(-1 * min(max(0px, (100vw - var(--container)) / 2) + var(--gutter), 9rem));
   }
   .hero-photo img { object-position: 74% 50%; }
 }

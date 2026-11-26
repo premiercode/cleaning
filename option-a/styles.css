@@ -409,6 +409,7 @@
   @media (min-width: 40em) { .room-img { aspect-ratio: 4 / 3; } }
   .room-img picture { height: 100%; }
   .room-img img.pos-mop { object-position: 50% 58%; }
+  .room-img img.pos-bed { object-position: 50% 80%; scale: 2; transform-origin: 52% 92%; }
   .room-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
   .room:hover .room-img img { transform: scale(1.05); }
   .room-body { padding: 1.4rem 1.4rem 1.6rem; }
