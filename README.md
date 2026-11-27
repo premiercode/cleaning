@@ -14,7 +14,7 @@ Switch between them with the Option A / B / C control at the bottom-left of ever
 
 | Option | URL | Concept |
 |---|---|---|
-| Option A | https://cleaning.premiercodeinc.com/option-a/ | Fresh and bright: white space, mint and sky accents, small sparkle animations, rounded friendly type. The instant quote card is the hero. |
+| Option A | https://cleaning.premiercodeinc.com/option-a/ | Fresh and bright: white space, mint and sky accents, a one-time squeegee wipe across the hero, rounded friendly type. The instant quote card is the hero. |
 | Option B | https://cleaning.premiercodeinc.com/option-b/ | Boutique concierge: linen and charcoal, a refined serif, an editorial hotel-like layout with a calm estimate card. |
 | Option C | https://cleaning.premiercodeinc.com/option-c/ | Playful checklist: bold color blocks, hand-drawn check marks, and a tabbed room-by-room checklist as the signature section. |
 

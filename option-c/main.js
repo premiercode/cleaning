@@ -116,7 +116,7 @@
     // "Request this cleaning": carry the ticket choices into the form, then move there
     var requestBtn = document.getElementById('q-request');
     var BEDS_TO_FORM = { '0': '2', '1': '3', '2': '4', custom: '5 or more' };
-    var BATHS_TO_FORM = { '0': '1', '1': '2', '2': '3' };
+    var BATHS_TO_FORM = { '0': '1', '1': '2', '2': '3 or more' };
     var SERVICE_TO_FORM = { standard: 'Standard', deep: 'Deep', move: 'Move-in/out' };
     var FREQ_TO_FORM = { '0': 'One-time', '0.15': 'Weekly', '0.10': 'Every two weeks', '0.05': 'Monthly' };
     var setSelect = function (id, value) {

@@ -1,5 +1,5 @@
 /* Bur Oak Home Cleaning Co. | Option B
-   Estimate card (Sample prices), form preview handling, slow scroll fades. */
+   Estimate card (Sample prices), form preview handling, short photo fades. */
 (function () {
   'use strict';
 
@@ -43,7 +43,8 @@
     var base = PRICES[type][row];
     var discount = type === 'standard' ? DISCOUNT[freq] : 0;
     var low = Math.round(base * (1 - discount));
-    var high = Math.round(low * 1.25);
+    // Shared rule across options: top of range is base x 1.25, rounded to the nearest $5
+    var high = Math.round(low * 1.25 / 5) * 5;
 
     var detail;
     if (type === 'move') {
@@ -124,7 +125,7 @@
     });
   }
 
-  /* ---------- Slow fades on scroll (skipped under reduced motion) ---------- */
+  /* ---------- Photo fades on scroll (skipped under reduced motion) ---------- */
   var items = document.querySelectorAll('.reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('is-visible'); });
